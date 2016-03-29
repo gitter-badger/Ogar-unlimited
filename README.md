@@ -1,5 +1,7 @@
 
 # Ogar unlimited - The Next Generation Ogar
+
+[![Join the chat at https://gitter.im/MichaelLeeHobbs/Ogar-unlimited](https://badges.gitter.im/MichaelLeeHobbs/Ogar-unlimited.svg)](https://gitter.im/MichaelLeeHobbs/Ogar-unlimited?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/AJS-development/Ogar-unlimited.svg?branch=master)](https://travis-ci.org/AJS-development/Ogar-unlimited)
 
 A fully functional open source Agar.io server implementation, written in Node.js by the big ajs development team. Ogar Unlimited is designed to be used with the latest Agar.io client. THIS IS A FORK OF THE ORIGINAL OGAR BUT THIS HAS MORE FEATURES, also, I borrowed from other forks: Kickbots, merge (edited by me), killrange(edited by me), kickrange(edited by me) commands and the nocollision game modes. Every other Extra feature I created.
