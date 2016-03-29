@@ -1,6 +1,8 @@
 
 # Ogar unlimited - The Next Generation Ogar
-[![Build Status](https://travis-ci.org/AJS-development/Ogar-unlimited.svg?branch=master)](https://travis-ci.org/AJS-development/Ogar-unlimited)
+
+[![Join the chat at https://gitter.im/AJS-development/Ogar-unlimited](https://badges.gitter.im/AJS-development/Ogar-unlimited.svg)](https://gitter.im/AJS-development/Ogar-unlimited?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/AJS-development/Ogar-unlimited.svg?branch=master)](https://travis-ci.org/AJS-development/Ogar-unlimited) [![Circle CI](https://circleci.com/gh/AJS-development/Ogar-unlimited.svg?style=svg)](https://circleci.com/gh/AJS-development/Ogar-unlimited)
 
 A fully functional open source Agar.io server implementation, written in Node.js by the big ajs development team. Ogar Unlimited is designed to be used with the latest Agar.io client. THIS IS A FORK OF THE ORIGINAL OGAR BUT THIS HAS MORE FEATURES, also, I borrowed from other forks: Kickbots, merge (edited by me), killrange(edited by me), kickrange(edited by me) commands and the nocollision game modes. Every other Extra feature I created.
 
@@ -9,6 +11,10 @@ This Modified copy was created to help those who want to open their server to th
 (Sorry but all client clones of agar.io are ILLEGAL, thus we are not making those. You must use `agar.io/?ip=[ip]`)
 
 (You can see all new features added [here] (https://github.com/AJS-development/Ogar-unlimited/blob/master/Newfeatures.md))
+
+**NOTE: FOR THOSE WHO CANT USE THE INSTALL DEPENDANCIES SCRIPT, YOU MUST DO NPM INSTALL AFTER YOU CD INTO THE SRC FOLDER OR USE NPM INSTALL WS AND NPM INSTALL REQUEST** (especially those who are confused by this awesome video by assault gaming [here](http://youtu.be/Q53R10of3_Q))
+
+(Wow, I found a funny and incredibly weird video by jp on agar.io [here](http://youtu.be/vbDsV-F6j34))
 
 ### Highlight features in this modified copy
  1. PMSG command, to periodically send a message (no need for admin to be online to explain rules)
@@ -36,10 +42,8 @@ This Modified copy was created to help those who want to open their server to th
  23. easy verify system as anti bot mesure (gameserver.ini)
  24. mousefilter as a anti bot measure
  
-(You can see all new features added [here] (https://github.com/AJS-development/Ogar-unlimited/blob/master/Newfeatures.md))
-
 ### Note:
-Please note that this is updated very frequently and you should check for updates every week. I may add an auto update system but I probably won't (because I don't think it is the right thing to do, updating without your consent) Also you may copy this and modify it without giving me credit, just please make it better, that is all I care. Another note is that I am sometimes terrible in my grammar (I still cannot spell potato out loud). If there is an issue, please notify me. If there is something you want in this, just make a pull request.
+Please note that this is updated very frequently and you should check for updates every week. I added an update system but It needs to be initialized by you (because I don't think it is the right thing to do, updating without your consent). Also you may copy this and modify it without giving me credit, just please make it better, that is all I care. Another note is that I am sometimes terrible in my grammar (I still cannot spell potato out loud). If there is an issue, please notify me. If there is something you want in this, just make a pull request.
 
 ### Official Website (for official ogar)
 The official website for the Ogar Project is [ogarproject.com](http://ogarproject.com). You can register on the forums to chat with other Ogar users, get support, advertise your server, and more.
@@ -48,7 +52,7 @@ The official website for the Ogar Project is [ogarproject.com](http://ogarprojec
 If you've purchased a copy of Ogar, you've probably been SERIOUSLY ripped off. [This post on our website explains why.](http://ogarproject.com/threads/psa-if-you-purchased-ogar-youve-been-ripped-off.6/)
 
 ### Easy Verify
-For those of you who have trouble with minions and such, this feature is for you. Currently, there is no program that can get through all of ogar unlimited's filterrs anddd features, but in some future, someone might be able to crack the other anti bot mesures. So we created easy verify, a currently foolproof system that filters out bots. To turn on, turn verify to 1 in config. Then when a player spawns, he is frozen at a spot and is given a 3 digit code. Then that player presses w to kill himself and types in the code in the nickname box. Afteword, when pressing play again, it shows a success message. Press w again to kill and then type your desired name and play as normal. Only required to do once per player, each player is given a different random code that changes on fail. If fail passes over an amount, they are kicked for good.
+For those of you who have trouble with minions and such, this feature is for you. Currently, there is no program that can get through all of ogar unlimited's filterrs anddd features, but in some future, someone might be able to crack the other anti bot mesures. So we created easy verify, a currently foolproof system that filters out bots. To turn on, turn verify to 1 in config. Then when a player spawns, he is frozen at a spot and is given a 3 digit code. Then that player presses w to kill himself and types in the code in the nickname box. Afteword, when pressing play again, it shows a success message. Press w again to play.
 
 ### Minions
 You use minions by first adding bots with the addbot command. Then in console, you do `minion [id]` to turn your bots into your minions the id field is your id. Then, they will start following your mouse. You can control those minions by useing the q key. If you press it, a B will appear next to your name. then controls will be normal except now ejecting and splitting will happen on your minions not you. you can reenter normal control mode by pressing q again. You can disable minions by doing `minion` in console
@@ -107,7 +111,6 @@ Id   | Name
 16   | NoCollision TeamZ
 17   | NoCollision TeamX
 18   | Leap - Where you leap instead of split, made by Ogarplus
-19   | Virus - Where you shoot viruses
 22   | BlackHole
 
 ## Console Commands
@@ -137,6 +140,10 @@ The current available console commands are listed here. Command names are not ca
    * Gets changelog from the servers
  - Explode [id]
    * explodes player
+ - Blind [id]
+   * Blinds/unblinds a player
+ - Hide [id]
+   * Hides/unhides a player
  - Split [ID] [Count]
    * Splits a player
  - Shrink [amount]
@@ -234,7 +241,7 @@ The current available console commands are listed here. Command names are not ca
  - Name [Player ID] [New Name]
    * Changes the name of the player with the specified id with [New Name].
  - Playerlist
-   * Shows a list of connected players, their IP, player ID, the amount of cells they have, total mass, and their position. 
+   * Shows a list of connected players, their IP, player ID, the amount of cells they have, total mass, and their position.
  - Pause
    * Pauses/Unpauses the game.
  - Reload
